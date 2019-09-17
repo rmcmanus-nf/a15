@@ -1,0 +1,33 @@
+{
+  "packages": [
+    {
+      "name": "NextFlex A15",
+      "maintainer": "Rob McManus",
+      "websiteURL": "nextflex.us",
+      "email": "rmcmanus@nextflex.us",
+      "help": {
+        "online": "nextflex.us"
+      },
+      "platforms": [
+        {
+          "name": "NextFlex Boards",
+          "architecture": "avr",
+          "version": "1.1.0",
+          "category": "Contributed",
+          "help": {
+            "online": "nextflex.us"
+          },
+          "url": "https://github.com/rmcmanus-nf/a15/raw/master/A15.zip",
+          "archiveFileName": "A15.zip",
+          "checksum": "md5:3eba30ceb1456858962ff9738ca402fa",
+          "size": "18849",
+          "boards": [
+            {"name": "NextFlex A15 (8MHz Internal)"}
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools":[]
+    }
+  ]
+}
