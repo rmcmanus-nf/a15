@@ -28,9 +28,11 @@ Although there are dedicated ISP Programmers, a common and inexpensive method to
 
 ### Preperation - Configuring the Arduino UNO
 Before an Arduino can be used as an ISP programmer, it must first be programmed with a translation program that communicates via serial on to the host interface and SPI to the target device.  Within the provided examples, Arduino has a sketch called *ArduinoISP*.
+
 ![arduino isp sketch](./img/arduino_isp_setup1.png)
 
 Insert the Arduino (for this example the UNO), configure the proper port/board setting, and upload the sketch.
+
 ![arduino uno settings](./img/arduino_isp_setup2.png) ![arduino upload](./img/arduino_isp_setup3.png)
 
 ### Step One - Connect The A15 Via A Programmer
@@ -70,9 +72,8 @@ Once you have successfully connected your programming interface, you are ready f
 
 ### Step Two - Load the NextFlex A15 Board into the Arduino IDE
 
-Once you have connected your Arduino to the A15, then you are ready to install a bootloader.
+For convenience, we've created an Arduino Board package.  To install the NextFlex A15 package, perform the following.
 
-The first step of this is to download the NextFlex A15 board package. 
 In Arduino, navigate to Files > Preferences > Additional Boards Manager URLSs.
 Paste the following URL to the open space: ```https://raw.githubusercontent.com/rmcmanus-nf/a15/master/package_A15_index.json```
 
@@ -118,6 +119,6 @@ void loop() {
 To upload, navigate to *Sketch > Upload Using Programmer*.  Do NOT use the *Upload* button or icon.
 Your Arduino should blink its LEDs. 
 
-~[arduino upload using programmer](./img/upload_using_programmer.png)
+![arduino upload using programmer](./img/upload_using_programmer.png)
 
 Congratulations, you have uploaded a program to the A15!
