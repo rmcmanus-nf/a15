@@ -118,6 +118,6 @@ void loop() {
 To upload, navigate to *Sketch > Upload Using Programmer*.  Do NOT use the *Upload* button or icon.
 Your Arduino should blink its LEDs. 
 
-~[arduino upload using programmer](./img/upload_using_programmer.png)
+![arduino upload using programmer](./img/upload_using_programmer.png)
 
 Congratulations, you have uploaded a program to the A15!
