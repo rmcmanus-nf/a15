@@ -43,18 +43,18 @@ The A15 uses a 30-pin 0.5mm pitch ZIF interface.  An easy to use break-out board
 
 ![fpc_30p](./img/fpc_30p.jpg)
 
-__NOTE:__ Most ZIF connectors have contacts only on the bottom requiring the user to place the A15 device face down in the connector. If a ZIF connector with contacts on both sides or the top of the connector is used, and the device is being placed face up in the connector the pin mapping on the ZIF connector should be reversed.
+__NOTE:__ Most ZIF connectors have contacts only on the bottom requiring the user to place the A15 device face down in the connector.  If this is the case the pin mapping on the ZIF connector starts with the number one pin at the bottom of the connector. If a ZIF connector with contacts on both sides or the top of the connector is used, and the device is being placed face up in the connector the pin mapping on the ZIF connector should be reversed.
 
 Once you have your A15 hooked up to a ZIF connector, you are ready to start connecting pins.
 
 Connections:
 
-* Arduino GND -> ZIF 1,2,3
-* Arduino Vin -> ZIF 4,5,6
-* Arduino 10 -> ZIF 13 (Reset)
-* Arduino 11 -> ZIF 24 (MOSI)
-* Arduino 12 -> ZIF 23 (MISO)
-* Arduino 13 -> ZIF 22 (SCK)
+* Arduino GND -> ZIF 30,29,28
+* Arduino Vin -> ZIF 27,26,25
+* Arduino 10 -> ZIF 18 (Reset)
+* Arduino 11 -> ZIF 7 (MOSI)
+* Arduino 12 -> ZIF 8 (MISO)
+* Arduino 13 -> ZIF 9 (SCK)
 
 ![A15 connections](./img/a15_connections.PNG)
 
@@ -71,6 +71,13 @@ The POGO connection, ZIF connection, and front facing pads connections are all S
 Once you have successfully connected your programming interface, you are ready for the next step.
 
 ### Step Two - Load the NextFlex A15 Board into the Arduino IDE
+
+In order to execute step 2 the Arduino IDE software must first be installed.  It is recommended to install the latest version using the offline installer instead of going through the Windows App store as the Windows App store version may lead to broken dependencies.
+
+The IDE can be downloaded from:
+[https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
+
+Once the IDE is correctly installed the proper board settings must be set.
 
 For convenience, we've created an Arduino Board package.  To install the NextFlex A15 package, perform the following.
 
@@ -92,8 +99,11 @@ Congratulations! You have added the NextFlex A15 Board into the Arduino IDE.
 
 ### Step Three - Upload A Program
 
-Once you have selected the NextFlex A15 Board, you are ready to upload a program.  If you are using an Arduino to program via the ISP, you will need to specify the port of the connected Arduino, and the programmer as *Arduino as ISP*, as shown here:
+Once you have selected the NextFlex A15 Board, you are ready to upload a program. Connect the USB for the Arduino you are using as a programmer (in this example and Arduino UNO is used) to the USB port of the computer on which you are running the IDE.  If you are using an Arduino to program via the ISP, you will need to specify the port of the connected Arduino, and the programmer as *Arduino as ISP*, as shown here:
+
 ![arduino upload](./img/arduino_isp_setup4.png)
+
+Connect the USB for the Arduino you are using as a programmer (in this example and Arduino UNO is used) to the USB port of the computer on which you are running the IDE.  
 
 Create a new Sketch, paste the following code in Arduino:
 
