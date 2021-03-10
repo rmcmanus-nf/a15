@@ -20,6 +20,47 @@ See the following image:
 
 Left: ZIF connection. Center: POGO connection. Right: Power pads.
 
+### ZIF Connection ###
+The ZIF connection exposes all of the Atmega 328P pins, even more so than typical Arduino boards.  The numbering convention follows the following diagram:<br>
+![ZIF pin numbering](./img/ZIF_numbering.png)
+
+A table of the connections and their relationship to pin function is as follows:
+| External Pads | Arduino Pin IDE | ZIF Connector (Flipped, Rigid) | PAD                        | EXTINT | PCINT   | ADC/AC | OSC  | T/C #0 | T/C #1 | USART0 | ISC0 | SPI0  |
+| ------------- | --------------- | ------------------------------ | -------------------------- | ------ | ------- | ------ | ---- | ------ | ------ | ------ | ---- | ----- |
+|               |                 | 1                              | PD\[6\]                    |        |         |        |      |        |        |        |      |       |
+|               |                 | 2                              | PD\[7\]                    |        |         |        |      |        |        |        |      |       |
+|               | 5               | 3                              | PD\[5\]                    |        | PCINT21 |        |      | OC0B   | T1     |        |      |       |
+|               | 8               | 4                              | PB\[0\]                    |        | PCINT0  |        | CLK0 | OC2A   |        |        |      |       |
+| LED           | 9               | 5                              | PB\[1\]                    |        | PCINT1  |        |      |        |        |        |      |       |
+| LED           | 10              | 6                              | PB\[2\]                    |        | PCINT2  |        |      |        |        |        |      | ~SS0  |
+| MOSI0         | 11              | 7                              | PB\[3\]                    |        | PCINT3  |        |      |        |        |        |      | MOSI0 |
+| MISO0         | 12              | 8                              | PB\[4\]                    |        | PCINT4  |        |      |        |        |        |      | MISO0 |
+| SCK0          | 13              | 9                              | PB\[5\]                    |        | PCINT5  |        |      |        |        |        |      | SCK0  |
+|               | A6/20?          | 10                             | ADC6 (No connect in Ver 4) |        | ADC6    |        |      |        |        |        |      |
+|               | A7/21?          | 11                             | ADC7                       |        |         | ADC7   |      |        |        |        |      |       |
+|               | 14              | 12                             | PC\[0\]                    |        | PCINT8  | ADC0   |      |        |        |        |      |       |
+|               | 15              | 13                             | PC\[1\]                    |        | PCINT9  | ADC1   |      |        |        |        |      |       |
+|               | 16              | 14                             | PC\[2\]                    |        | PCINT10 | ADC2   |      |        |        |        |      |       |
+|               | 17              | 15                             | PC\[3\]                    |        | PCINT11 | ADC3   |      |        |        |        |      |       |
+|               | 18              | 16                             | PC\[4\]                    |        | PCINT12 | ADC4   |      |        |        |        | SDA0 |       |
+|               | 19              | 17                             | PC\[5\]                    |        | PCINT13 | ADC5   |      |        |        |        | SCL0 |       |
+|               | RESET           | 18                             | PC\[6\]/~RESET             |        | PCINT14 |        |      |        |        |        |      |       |
+|               | 0               | 19                             | PD\[0\]                    |        | PCINT16 |        |      |        |        | RXD0   |      |       |
+|               | 1               | 20                             | PD\[1\]                    |        | PCINT17 |        |      |        |        | TXD0   |      |       |
+|               | 2               | 21                             | PD\[2\]                    | INT0   | PCINT18 |        |      |        |        |        |      |       |
+|               | 3               | 22                             | PD\[3\]                    | INT1   | PCINT19 |        |      | OC2B   |        |        |      |       |
+|               | 4               | 23                             | PD\[4\]                    |        | PCINT20 |        |      | T0     |        | XCK0   |      |       |
+|               |                 | 24                             |                            |        |         |        |      |        |        |        |      |       |
+|               |                 | 25-27                          | VCC                        |        |         |        |      |        |        |        |      |       |
+|               |                 | 25-27                          | VCC                        |        |         |        |      |        |        |        |      |       |
+|               |                 | 28-30                          | GND                        |        |         |        |      |        |        |        |      |       |
+|               |                 | 28-30                          | GND                        |        |         |        |      |        |        |        |      |       |
+|               | N/C             | N/C                            | PD\[6\]                    |        | PCINT22 | AIN0   |      | OC1A   |        |        |      |       |
+|               | N/C             | N/C                            | PD\[7\]                    |        | PCINT23 | AIN1   |      | OC1B   |        |        |      |       |
+|               |                 |                                | AVCC                       |        |         |        |      |        |        |        |      |       |
+|               |                 |                                | AREF                       |        |         |        |      |        |        |        |      |       |
+|               |                 |                                | GND                        |        |         |        |      |        |        |        |      |       |
+
 __NOTE:__ To learn more about both of these connections, see the A15 Technical Specification Guide.
 
 # Programming A15 with Arduino Uno Guide
