@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The A15 is a flexible microcontroller, based on the Arduino Mini, and is compatible with many existing Arduino libaries and peripheral hardware.  Programming the devices is performed via the AVR In-System Programming interface.  This interface is accessible via the SPI lines and RESET line of the device.
+The A15 is a flexible microcontroller, based on the Arduino Mini, and is compatible with many existing Arduino libaries and peripheral hardware.  Programming the devices is performed via the AVR In-System Programming (ISP) interface.  This interface is accessible via the SPI lines and RESET line of the device.
 
 This guide is intended to provide some initial instructions for dev environment setup and programming.
 
