@@ -78,7 +78,9 @@ Insert the Arduino (for this example the UNO), configure the proper port/board s
 
 ### Step One - Connect The A15 Via A Programmer
 
-Once setup, the Zero Insertion Force (ZIF) interface provides a convenient development environment that enables programming and device testing.
+Once setup, the Zero Insertion Force (ZIF) interface provides a convenient development environment that enables programming and device testing.  There is also a 6-pin pogo interface that we found more consistent for conductivity.
+
+#### ZIF Interface
 
 The A15 uses a 30-pin 0.5mm pitch ZIF interface.  An easy to use break-out board for development can be found, [here](https://www.amazon.com/gp/product/B07RWNFKCR/).  Other ZIF connectors should work well, though we have found a need to insert a spacer to make good contact with other connectors.
 
@@ -99,6 +101,9 @@ Connections:
 
 ![A15 connections](./img/a15_connections.PNG)
 
+![A15 ZIF wiring](./img/zif_wiring.jpg)
+
+#### 6-pin Pogo Interface
 The secondary 6-pin POGO interface is useful for embedded devices where connection to the ZIF connector is not practical.  Source parts can be purchased from a variety of vendors, a fully assembled 6-pin connector can be found, [here](https://www.segger.com/products/debug-probes/j-link/accessories/adapters/6-pin-needle-adapter/).  An example of this interface can be seen in the following images:
 
 ![pogo connections side](./img/pogoconnection_side.jpg)
