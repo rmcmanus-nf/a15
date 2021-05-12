@@ -22,7 +22,7 @@ Left: ZIF connection. Center: POGO connection. Right: Power pads.
 
 ### ZIF Connection ###
 The ZIF connection exposes all of the Atmega 328P pins, even more so than typical Arduino boards.  The numbering convention follows the following diagram:<br>
-![ZIF pin numbering](./img/ZIF_numbering.png)
+![ZIF pin number](./img/ZIF_number.png)
 
 A table of the connections and their relationship to pin function is as follows:
 | External Pads | Arduino Pin IDE | ZIF Connector (Flipped, Rigid) | PAD                        | EXTINT | PCINT   | ADC/AC | OSC  | T/C #0 | T/C #1 | USART0 | ISC0 | SPI0  |
@@ -61,7 +61,7 @@ A table of the connections and their relationship to pin function is as follows:
 |               |                 |                                | AREF                       |        |         |        |      |        |        |        |      |       |
 |               |                 |                                | GND                        |        |         |        |      |        |        |        |      |       |
 
-__NOTE:__ To learn more about both of these connections, see the A15 Technical Specification Guide.
+__NOTE:__ To learn more about both of these connections, see the [A15 Technical Specification Guide](./A15v4-3%20Technical%20Specifications%20Release.pdf).
 
 # Programming A15 with Arduino Uno Guide
 
